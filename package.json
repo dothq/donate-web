@@ -1,0 +1,32 @@
+{
+  "private": true,
+  "name": "@dothq/donate",
+  "description": "Donation frontend",
+  "license": "MPL-2.0",
+  "scripts": {
+    "build": "npm run build:css && remix build",
+    "build:css": "tailwindcss -o ./app/tailwind.css",
+    "dev": "concurrently \"npm run dev:css\" \"remix dev\"",
+    "dev:css": "tailwindcss -o ./app/styles/core.css --watch"
+  },
+  "dependencies": {
+    "@remix-run/react": "^1.0.6",
+    "@remix-run/serve": "^1.0.6",
+    "@remix-run/vercel": "^1.0.6",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "remix": "^1.0.6"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^1.0.6",
+    "@types/react": "^17.0.24",
+    "@types/react-dom": "^17.0.9",
+    "concurrently": "^6.4.0",
+    "tailwindcss": "^3.0.0",
+    "typescript": "^4.1.2"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "sideEffects": false
+}
